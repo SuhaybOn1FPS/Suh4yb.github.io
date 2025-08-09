@@ -1,34 +1,47 @@
-/* Base styles */
-body {
+/* Full-page center + huge responsive title */
+html, body {
+  height: 100%;
   margin: 0;
-  background: black;
-  color: #00ff00;
-  font-family: 'VT323', monospace;
+  background: #0a0a0a;       /* dark bg */
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-family: 'VT323', monospace;
+  color: #00ff00;
 }
 
-/* Top-centered logo */
-.header {
+h1.site-title {
+  margin: 0;
+  /* responsive size:
+     - min 3.5rem on tiny phones
+     - scales with vw in the middle
+     - max 18rem on huge screens */
+  font-size: clamp(3.5rem, 16vw, 18rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
   text-align: center;
-  padding: 40px 0 20px 0;
+
+  /* optional frosty glow */
+  text-shadow:
+    0 0 8px rgba(0,255,0,0.18),
+    0 0 24px rgba(0,255,0,0.08),
+    0 8px 24px rgba(0,0,0,0.6);
+
+  /* subtle scale-in for presence */
+  transform-origin: center;
 }
 
-.header .main {
-  font-size: clamp(64px, 12vw, 128px); /* responsive scaling */
-  line-height: 1;
+/* Make sure smaller elements (like a badge) don't overlap */
+.sub-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  font-size: clamp(0.9rem, 2.6vw, 1.6rem);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(0,255,0,0.06);
+  color: #00ff00;
+  text-shadow: none;
 }
-
-.header .sub {
-  font-size: clamp(24px, 5vw, 48px);
-  margin-top: 8px;
-  display: block;
-  opacity: 0.9;
-}
-
-/* Page content below logo */
-.content {
-  display: flex;
-  flex-direction: column;
-  align
