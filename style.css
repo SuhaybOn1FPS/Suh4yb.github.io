@@ -2,19 +2,19 @@ body {
   background-color: black;
   color: white;
   font-family: Verdana, Geneva, sans-serif;
+  
   display: flex;              
   flex-direction: column;     
-  justify-content: center;    
-  align-items: center;        
-  min-height: 100vh;          
+  align-items: center;        /* center horizontally */
   margin: 0;                  
   text-align: center; 
 }
+
 .site-title {
   font-size: 80px;
-  
 }
+
 .dev {
   font-size: 20px;
   color: green;
-} 
+}
