@@ -18,3 +18,57 @@ body {
   font-size: 20px;
   color: green;
 }
+.link-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect */
+.link-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Platform-specific colors */
+.discord {
+  background-color: #5865F2;
+}
+.discord:hover {
+  background-color: #4752c4;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.instagram:hover {
+  opacity: 0.9;
+}
+
+.youtube {
+  background-color: #FF0000;
+}
+.youtube:hover {
+  background-color: #cc0000;
+}
+
+.reddit {
+  background-color: #FF4500;
+}
+.reddit:hover {
+  background-color: #cc3700;
+}
+
+.steam {
+  background-color: #171a21;
+}
+.steam:hover {
+  background-color: #0b0c10;
+}
