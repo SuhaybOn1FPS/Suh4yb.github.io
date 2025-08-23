@@ -82,3 +82,6 @@ body::before {
 .tiktok:hover {
   opacity: 0.9; /* subtle hover effect */
 }
+
+.steam { background-color: #171a21; }
+.steam:hover { background-color: #0b0c10; }
