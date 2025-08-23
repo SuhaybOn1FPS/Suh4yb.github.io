@@ -73,3 +73,12 @@ body::before {
 
 .steam { background-color: #171a21; }
 .steam:hover { background-color: #0b0c10; }
+
+.tiktok {
+  background-color: #010101; /* TikTok's black background */
+}
+
+.tiktok:hover {
+  background-color: #ff0050; /* TikTok's signature pink/red */
+}
+
