@@ -3,11 +3,30 @@ body {
   color: white;
   font-family: Verdana, Geneva, sans-serif;
   background-image: url('images/background.jpg'); 
+  background-size: cover;           /* makes the image cover the screen */
+  background-position: center;      /* centers the image */
+  background-repeat: no-repeat;     /* prevents tiling */
+  background-attachment: fixed;     /* stays fixed when scrolling */
   display: flex;              
   flex-direction: column;     
   align-items: center;        /* center horizontally */
+  justify-content: center;     /* center vertically */
   margin: 0;                  
   text-align: center; 
+  min-height: 100vh;           /* ensures it fills full height */
+  position: relative;          /* for overlay */
+}
+
+/* Optional: overlay to make text more readable */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent black overlay */
+  z-index: -1; /* behind content */
 }
 
 .site-title {
@@ -18,6 +37,7 @@ body {
   font-size: 20px;
   color: green;
 }
+
 .link-btn {
   display: inline-block;
   margin: 10px;
@@ -38,37 +58,17 @@ body {
 }
 
 /* Platform-specific colors */
-.discord {
-  background-color: #5865F2;
-}
-.discord:hover {
-  background-color: #4752c4;
-}
+.discord { background-color: #5865F2; }
+.discord:hover { background-color: #4752c4; }
 
-.instagram {
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-}
-.instagram:hover {
-  opacity: 0.9;
-}
+.instagram { background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); }
+.instagram:hover { opacity: 0.9; }
 
-.youtube {
-  background-color: #FF0000;
-}
-.youtube:hover {
-  background-color: #cc0000;
-}
+.youtube { background-color: #FF0000; }
+.youtube:hover { background-color: #cc0000; }
 
-.reddit {
-  background-color: #FF4500;
-}
-.reddit:hover {
-  background-color: #cc3700;
-}
+.reddit { background-color: #FF4500; }
+.reddit:hover { background-color: #cc3700; }
 
-.steam {
-  background-color: #171a21;
-}
-.steam:hover {
-  background-color: #0b0c10;
-}
+.steam { background-color: #171a21; }
+.steam:hover { background-color: #0b0c10; }
