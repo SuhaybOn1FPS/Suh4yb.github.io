@@ -75,10 +75,10 @@ body::before {
 .steam:hover { background-color: #0b0c10; }
 
 .tiktok {
-  background-color: #010101; /* TikTok's black background */
+  background: linear-gradient(45deg, #ff0050, #00f2ea);
+  color: white;
 }
 
 .tiktok:hover {
-  background-color: #ff0050; /* TikTok's signature pink/red */
+  opacity: 0.9; /* subtle hover effect */
 }
-
