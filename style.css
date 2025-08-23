@@ -10,11 +10,12 @@ body {
   display: flex;              
   flex-direction: column;     
   align-items: center;        /* center horizontally */
-  justify-content: center;     /* center vertically */
+  justify-content: flex-start;     /* center vertically */
   margin: 0;                  
   text-align: center; 
   min-height: 100vh;           /* ensures it fills full height */
   position: relative;          /* for overlay */
+  padding-top: 40px;
 }
 
 /* Optional: overlay to make text more readable */
