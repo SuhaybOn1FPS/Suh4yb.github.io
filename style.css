@@ -83,5 +83,13 @@ body::before {
   opacity: 0.9; /* subtle hover effect */
 }
 
-.steam { background-color: #171a21; }
-.steam:hover { background-color: #0b0c10; }
+/* Rickroll button style */
+.rickroll {
+  background-color: #ffcc00;   /* bright yellow for attention */
+  color: #000;                 /* black text */
+}
+
+.rickroll:hover {
+  background-color: #ff9900;   /* darker yellow on hover */
+}
+
