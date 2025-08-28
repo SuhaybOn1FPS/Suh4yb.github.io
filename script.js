@@ -26,6 +26,8 @@ const songs = [
 ];
 
 let index = 0;
+const INTERVAL = 5000; // 5 seconds autoplay
+let timer;
 
 const cover = document.getElementById("cover");
 const title = document.getElementById("title");
@@ -45,15 +47,22 @@ function renderSong(i) {
   });
 }
 
-document.getElementById("prevBtn").addEventListener("click", () => {
+function showPrev() {
   index = (index - 1 + songs.length) % songs.length;
   renderSong(index);
-});
+  resetTimer();
+}
 
-document.getElementById("nextBtn").addEventListener("click", () => {
+function showNext() {
   index = (index + 1) % songs.length;
   renderSong(index);
-});
+  resetTimer();
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(showNext, INTERVAL);
+}
 
 // Create dots
 songs.forEach((_, i) => {
@@ -61,10 +70,15 @@ songs.forEach((_, i) => {
   btn.addEventListener("click", () => {
     index = i;
     renderSong(index);
+    resetTimer();
   });
   dotsContainer.appendChild(btn);
 });
 
 // Initialize
 renderSong(index);
+timer = setInterval(showNext, INTERVAL);
+
+document.getElementById("prevBtn").addEventListener("click", showPrev);
+document.getElementById("nextBtn").addEventListener("click", showNext);
 
