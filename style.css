@@ -93,3 +93,113 @@ body::before {
   background-color: #ff9900;   /* darker yellow on hover */
 }
 
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.song-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+}
+
+.song-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+}
+
+.song-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.song-info {
+  padding: 1rem;
+}
+
+.song-info h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.song-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.play-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.play-btn:hover {
+  background: #333;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.carousel-arrow.left {
+  left: -2.5rem;
+}
+
+.carousel-arrow.right {
+  right: -2.5rem;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-dots button.active {
+  width: 20px;
+  background: black;
+}
+
+
