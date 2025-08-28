@@ -1,24 +1,25 @@
+/* ---------------------- Body & Background ---------------------- */
 body {
   background-color: black;
   color: white;
   font-family: Verdana, Geneva, sans-serif;
   background-image: url('./images/background.jpg'); 
-  background-size: cover;           /* makes the image cover the screen */
-  background-position: center;      /* centers the image */
-  background-repeat: no-repeat;     /* prevents tiling */
-  background-attachment: fixed;     /* stays fixed when scrolling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;              
   flex-direction: column;     
-  align-items: center;        /* center horizontally */
-  justify-content: flex-start;     /* center vertically */
+  align-items: center;
+  justify-content: flex-start;
   margin: 0;                  
   text-align: center; 
-  min-height: 100vh;           /* ensures it fills full height */
-  position: relative;          /* for overlay */
+  min-height: 100vh;
+  position: relative;
   padding-top: 40px;
 }
 
-/* Optional: overlay to make text more readable */
+/* Overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -26,10 +27,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent black overlay */
-  z-index: -1; /* behind content */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
+/* ---------------------- Site Title ---------------------- */
 .site-title {
   font-size: 80px;
 }
@@ -39,6 +41,15 @@ body::before {
   color: green;
 }
 
+/* ---------------------- Bio ---------------------- */
+.bio {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.5;
+}
+
+/* ---------------------- Social Links ---------------------- */
 .link-btn {
   display: inline-block;
   margin: 10px;
@@ -52,7 +63,6 @@ body::before {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect */
 .link-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
@@ -78,36 +88,21 @@ body::before {
   background: linear-gradient(45deg, #ff0050, #00f2ea);
   color: white;
 }
+.tiktok:hover { opacity: 0.9; }
 
-.tiktok:hover {
-  opacity: 0.9; /* subtle hover effect */
-}
-
-/* Rickroll button style */
 .rickroll {
-  background-color: #ffcc00;   /* bright yellow for attention */
-  color: #000;                 /* black text */
+  background-color: #ffcc00;
+  color: #000;
 }
+.rickroll:hover { background-color: #ff9900; }
 
-.rickroll:hover {
-  background-color: #ff9900;   /* darker yellow on hover */
-}
-
-body {
-  font-family: sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-}
-
+/* ---------------------- Song Carousel ---------------------- */
 .song-carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top: 40px;
 }
 
 .carousel-wrapper {
@@ -119,9 +114,10 @@ body {
 
 .song-card {
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   overflow: hidden;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent for dark bg */
+  color: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
   text-align: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -144,7 +140,7 @@ body {
 
 .song-info p {
   font-size: 0.9rem;
-  color: #666;
+  color: #ccc;
 }
 
 .play-btn {
@@ -152,56 +148,15 @@ body {
   margin-top: 0.75rem;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
 .play-btn:hover {
-  background: #333;
+  background: #eee;
 }
 
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.9);
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.carousel-arrow.left {
-  left: -2.5rem;
-}
-
-.carousel-arrow.right {
-  right: -2.5rem;
-}
-
-.carousel-dots {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.carousel-dots button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.carousel-dots button.active {
-  width: 20px;
-  background: black;
-}
-
-
+/* Carousel Arrows */
+.carousel-ar
