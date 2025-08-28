@@ -114,6 +114,7 @@ body {
   position: relative;
   max-width: 360px;
   width: 100%;
+  overflow: hidden;
 }
 
 .song-card {
@@ -122,6 +123,7 @@ body {
   overflow: hidden;
   background: #fff;
   text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .song-card img {
